@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 void main(){
-  runApp(MyApp());
+  runApp(formualrio_cliente());
 
 }
 
-class MyApp extends StatelessWidget{
+class formualrio_cliente extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
