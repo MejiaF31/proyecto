@@ -44,7 +44,8 @@ State<FormularioWidget> {
     if (fechaSeleccionada != null) {
       setState(() {
         fecha_registro =
-        "${fechaSeleccionada.year}-${fechaSeleccionada.month.toString().padLeft(2, '0')}-${fechaSeleccionada.day.toString().padLeft(2, '0')}";
+        "${fechaSeleccionada.year}-${fechaSeleccionada.month.toString().padLeft(
+            2, '0')}-${fechaSeleccionada.day.toString().padLeft(2, '0')}";
         _fechaController.text = fecha_registro;
       });
     }
@@ -110,10 +111,12 @@ State<FormularioWidget> {
           onPressed: () {
             showDialog(
               context: context,
-              builder: (context) => AlertDialog(
-                title: Text('Información ingresada'),
-                content: Text('Nombre: $nombre \nApellido: $apellido\nCarnet: $CI \nCelular: $celular \nFecha de regisro: $fecha_registro \nEstado: $estado'),
-              ),
+              builder: (context) =>
+                  AlertDialog(
+                    title: Text('Información ingresada'),
+                    content: Text(
+                        'Nombre: $nombre \nApellido: $apellido\nCarnet: $CI \nCelular: $celular \nFecha de regisro: $fecha_registro \nEstado: $estado'),
+                  ),
             );
           },
           child: Text('Enviar'),
@@ -121,3 +124,4 @@ State<FormularioWidget> {
       ],
     );
   }
+}
